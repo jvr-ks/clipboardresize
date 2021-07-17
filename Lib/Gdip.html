@@ -1,0 +1,1162 @@
+<!DOCTYPE html><html class="hcfe" lang="en"><head>
+
+<style>
+samp {
+    font-family: monospace;
+}
+</style>
+
+<title>Gdip - [DocGen]</title>
+<style data-id="all">html{-webkit-text-size-adjust:100%}html.hcfe{background-color:#f5f5f5;overflow-y:scroll}body.mobile{margin:0;position:relative}div{outline:none}.hcfe{background-color:#fff;color:#212121;font-family:Roboto, "Helvetica Neue", Helvetica, sans-serif;font-size:14px;line-height:20px}.hcfe p{margin:5px 0}.hcfe a{color:#4285f4;text-decoration:none}.hcfe a img{border:0}.hcfe article section section{padding:0}.hcfe ol,.hcfe ul{margin:0;outline:0;padding:0;vertical-align:baseline}.hcfe h1,.hcfe h2,.hcfe h3,.hcfe h4,.hcfe h5{color:#212121;font-weight:400}.hcfe h1{font-size:24px;line-height:32px;margin:0 0 8px}.hcfe h2{font-size:20px;line-height:32px;margin:32px 0 8px}.hcfe h3{font-size:18px;font-weight:500;line-height:28px;margin:24px 0 8px}.hcfe h4{font-size:16px;font-weight:700;line-height:24px;margin:20px 0 4px}.hcfe h5{font-size:14px;font-weight:inherit;line-height:24px;margin:16px 0 4px}.hcfe button,.hcfe input,.hcfe select,.hcfe textarea{color:#212121;font-family:Roboto, "Helvetica Neue", Helvetica, sans-serif;font-size:14px;line-height:20px}.hcfe select{background:none;border:solid #d9d9d9;border-width:0 0 1px 0;font-size:13px;font-weight:bold;max-width:100%;outline:0;padding:5px}.hcfe img{vertical-align:middle}.hcfe article section{padding:16px}.hcfe>header{background-color:#4285f4}.searchbar{background-color:#4285f4;color:#fff;overflow:hidden;padding:0 65px 0 16px;text-overflow:ellipsis;white-space:nowrap}.searchbar ::-webkit-input-placeholder{color:#757575}.searchbar ::-moz-placeholder{color:#757575}.searchbar svg{fill:#fff;height:24px;width:24px}.hcfe .search-title{color:#fff;font-size:20px;line-height:56px}.toggles{position:absolute;right:16px;top:12px}.toggles>.more-toggle,.toggles>.search-toggle{background:none;border:0;padding:4px 3px 0;position:relative;z-index:1}.toggles>.more-toggle{margin-left:8px}button.search-toggle:focus,button.more-toggle:focus{outline:dotted thin #fff}.search-toggle .close-icon,.search-toggle.active .search-icon{display:none}.search-toggle.active .close-icon{display:inline-block}.search-toggle.active svg{fill:#757575}.search-toggle.active+.more-toggle{display:none}.search{display:none}.searchbar .search-back{left:16px;position:absolute;top:16px}.rtl .searchbar .search-back svg{transform:scaleX(-1)}form.search .search-box{background-color:#f5f5f5;border:none;border-radius:0;color:#212121;font-size:18px;height:56px;outline:0;padding:0 40px 0 72px;width:100%;-webkit-appearance:none}.show-search .search{display:inline}.search-container.show-search{background-color:#3367d6;left:0;position:absolute;top:0;width:100%}.search-overlay{display:none}.search-overlay.active{background-color:#212121;bottom:0;display:block;opacity:.5;position:absolute;top:56px;width:100%;z-index:1000}input[type=text]::-ms-clear{display:none;width:0;height:0}input[type=text]::-ms-reveal{display:none;width:0;height:0}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-results-button,input[type="search"]::-webkit-search-results-decoration{display:none}.appbar-link-container{display:inline-block;margin-right:4px}.appbar-link-container>a{color:#fff;padding:0 16px;line-height:48px;text-transform:uppercase}.appbar-link-container>a svg{fill:#fff;height:24px;margin-bottom:2px;margin-left:9.5px;vertical-align:middle;width:24px}.appbar{background-color:#4285f4}.cc{word-wrap:break-word}.cc h1{margin:24px 0 8px}.cc>h2>a,.cc>h3>a,.cc>h4>a{color:#212121}.cc>h2>a:hover,.cc>h3>a:hover,.cc>h4>a:hover{text-decoration:none}.cc div,.cc p,.cc ol,.cc ul{margin:4px 0 12px}.cc ul li{margin:4px 0 4px 26px}.cc ol li{margin:4px 0 4px 20px}.cc ol ol{list-style-type:lower-latin}.cc ul ul,.cc ol ul{list-style-type:disc}.cc code{color:#060}.cc pre{direction:ltr;margin:0;text-align:left;white-space:pre-wrap;word-wrap:break-word}.cc a:visited{color:#7759ae}.cc a[target="_blank"]:after,.notification a[target="_blank"]:after{content:'';background:no-repeat url(https://ssl.gstatic.com/support/content/images/sprites/core-mobile-52bf8ba6d40a366fb44d1a5ebcd44e8c.png) 0 0;display:inline-block;height:10px;margin:0 3px 0 5px;width:10px}.rtl .cc a[target="_blank"]:after,.rtl .notification a[target="_blank"]:after{transform:scaleX(-1)}.cc iframe{max-width:100%}.cc ul>li>ul{margin:0}.cc ul:not(.no-bullets):not(.no_bullets)>li{list-style-type:none;margin-left:0;padding-left:16px}.cc ul:not(.no-bullets):not(.no_bullets)>li:before{content:"\002022";float:left;font-size:16px;margin-left:-14px}.cc blockquote{margin:0 0 0 30px}.cc hr{border:none;border-top:1px dashed #e5e5e5}.img-2g{display:inline-block;height:auto !important}.hcfe img.float-left{float:left;margin-right:1em;max-width:50%}.hcfe img.float-right{float:right;margin-left:1em;max-width:50%}.hcfe img.screenshot{height:auto !important;width:100%}.cc img{max-width:100%}.cc table{border-collapse:collapse;border-spacing:0;margin:0;padding:0;border:0;outline:0}.cc .table-basic,.cc .table-stacked{margin-top:16px}.cc .table-basic caption,.cc .table-stacked caption{color:#212121;font-size:20px;font-weight:400;line-height:24px;padding-bottom:16px;text-align:left}@media all and (max-width:770px){.cc .table-basic caption,.cc .table-stacked caption{color:#757575}}.cc td{vertical-align:top}.cc td,.cc th{padding:13px 5px;position:relative}.cc th{color:#757575;font-weight:bold;text-align:left;vertical-align:baseline}.cc table .align-middle{vertical-align:middle}.page{display:inline-block;position:relative;width:100%}.page{box-shadow:0 2px 5px 0 rgba(0,0,0,.26)}.sub-article-container.shaded{border-top:1px solid #e0e0e0;background-color:#fafafa}.sub-article-container{clear:both;margin-top:-16px}.as{padding:31px 10px 46px 10px}.as.rated{padding-bottom:40px}.as.submitted{padding-bottom:16px}.as .title{color:#757575;font-weight:bold}.as .subtitle{color:#757575;margin-bottom:10px}.as:not(.rated) form,.as.rated .as-button,.as.submitted form{display:none}.as .as-button{background-color:#fafafa;border:0;border-radius:3px;box-shadow:0 2px 5px 0 rgba(0,0,0,.26);display:inline-block;line-height:16px;margin:6px 8px 6px 0;min-width:88px;padding:10px 0;text-align:center;text-transform:uppercase}.as .as-button:active{background-color:#e0e0e0}.as .as-button:hover{color:#757575}.as form{padding-top:0}.as .field{margin:16px 0}.as .field:first-of-type{margin-top:4px}.as textarea{border:1px solid #e0e0e0;box-sizing:border-box;color:#222222;max-width:448px;outline:none;padding:16px;resize:none;width:100%}.as .submit-button{background:#4285f4;border:0;border-radius:3px;box-shadow:0 2px 5px 0 rgba(0,0,0,.26);color:#fff;font-size:14px;line-height:16px;margin-top:8px;outline:0;padding:10px 16px;text-transform:uppercase}.as .submit-button:active{background:#3367d6;box-shadow:0 4px 8px 0 rgba(0,0,0,.4)}.social-sharing-widgets{border-top:0}.primary-nav{background-color:#4285f4}.primary-nav nav{margin-left:10px;width:256px}.sibling-nav{display:inline-block;margin-top:10px}.sibling-nav h4{margin-bottom:16px}.sibling-nav>ul{list-style:none}.sibling-nav a.title-link,.sibling-nav a.title-link:visited{color:#fff}.sibling-nav .sibling-list{margin-bottom:15px}.sibling-nav .sibling-list li{padding:0}.sibling-nav .sibling-list a.sibling-link.sibling-link--current{border-left:2px solid #fff;color:#fff;font-weight:700}.sibling-nav .sibling-list a.sibling-link{border-left:2px solid transparent;color:#e3edfe;display:block;padding:14px 0 14px 14px}.sibling-nav .sibling-list a.sibling-link.sibling-link--current.sibling-link--has-children{border-left-color:transparent}.sibling-nav .sibling-link--has-children:before{content:'?';margin-left:-16px;position:absolute;transform:scale(.3,.6)}.sibling-nav .sibling-link--has-children.sibling-link--show-children:before{content:'?';margin-left:-18px;transform:scale(.6,.3)}.sibling-nav .sibling-link--has-children+.sibling-sublist{display:none}.sibling-nav .sibling-link--has-children.sibling-link--show-children+.sibling-sublist{display:block}.sibling-nav .sibling-sublist{list-style:none;padding-left:20px}footer{background-color:#f5f5f5;padding:16px 0}footer ul{display:inline-block;list-style:none;margin:0;outline:0;padding:0;vertical-align:baseline}footer li{display:inline-block}footer li+li:before{content:'-'}footer>div{margin:10px 20px 20px 20px}.slow_con_container{text-align:center}.footer-links{color:#999;margin:0 10px}.footer-links a{color:#999;text-decoration:none}.footer-links ul{font-size:13px;line-height:48px;width:initial}.language-selector{display:inline-block}.language-selector select{font-size:11px;padding:6px 3px}.csi{display:none}</style><link></head><body class="mobile">    <div class="hcfe"> <header><div class="searchbar" st-ve="10">
+
+
+<a class="search-title" href="https://autohotkey.com/">Download AutoHotKey</a>
+
+<div st-ve="32"><div class="appbar"><div class="appbar-links"><span class="appbar-icon appbar-link-container">
+
+<a href="https://autohotkey.com/boards"st-ve="36" target="_blank"><span itemprop="title">Script Forums Link</span><svg viewbox="0 0 48 48"><path d="M20.17 31.17L23 34l10-10-10-10-2.83 2.83L25.34 22H6v4h19.34l-5.17 5.17zM38 6H10c-2.21 0-4 1.79-4 4v8h4v-8h28v28H10v-8H6v8c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V10c0-2.21-1.79-4-4-4z"></path></svg></a></span>
+
+</div></div></div></header><div class="search-overlay search-toggle"></div>     <section class="primary-container">    <article class="page"> <section data-tracking-cat="article-container" st-ve="35">
+
+<!-- Navigation Links At Top -->
+<a href="#Description">Description</a>
+
+
+<p><a href="#Functions">Functions</a></p
+
+
+<!-- ScriptName -->
+<h1 id="Description">Gdip</h1><div class="cc">
+<p>Gdip standard library v1.45 by tic (Tariq Porter) 07/09/11</p>
+<p>Modifed by Rseding91 using fincs 64 bit compatible Gdip library 5/1/2013</p>
+<p>Supports: Basic, _L ANSi, _L Unicode x86 and _L Unicode x64</p>
+<p></p>
+<p>Updated 2/20/2014 - fixed Gdip_CreateRegion() and Gdip_GetClipRegion() on AHK Unicode x86</p>
+<p></p>
+<p>#####################################################################################</p>
+<p>#####################################################################################</p>
+<p>STATUS ENUMERATION</p>
+<p>Return values for functions specified to have status enumerated return type</p>
+<p>#####################################################################################</p>
+<p></p>
+<p>Ok =						= 0</p>
+<p>GenericError				= 1</p>
+<p>InvalidParameter			= 2</p>
+<p>OutOfMemory				= 3</p>
+<p>ObjectBusy				= 4</p>
+<p>InsufficientBuffer		= 5</p>
+<p>NotImplemented			= 6</p>
+<p>Win32Error				= 7</p>
+<p>WrongState				= 8</p>
+<p>Aborted					= 9</p>
+<p>FileNotFound				= 10</p>
+<p>ValueOverflow				= 11</p>
+<p>AccessDenied				= 12</p>
+<p>UnknownImageFormat		= 13</p>
+<p>FontFamilyNotFound		= 14</p>
+<p>FontStyleNotFound			= 15</p>
+<p>NotTrueTypeFont			= 16</p>
+<p>UnsupportedGdiplusVersion	= 17</p>
+<p>GdiplusNotInitialized		= 18</p>
+<p>PropertyNotFound			= 19</p>
+<p>PropertyNotSupported		= 20</p>
+<p>ProfileNotFound			= 21</p>
+<p></p>
+<p>#####################################################################################</p>
+<p>#####################################################################################</p>
+<p>FUNCTIONS</p>
+<p>#####################################################################################</p>
+<p></p>
+<p>UpdateLayeredWindow(hwnd, hdc, x="", y="", w="", h="", Alpha=255)</p>
+<p>BitBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, Raster="")</p>
+<p>StretchBlt(dDC, dx, dy, dw, dh, sDC, sx, sy, sw, sh, Raster="")</p>
+<p>SetImage(hwnd, hBitmap)</p>
+<p>Gdip_BitmapFromScreen(Screen=0, Raster="")</p>
+<p>CreateRectF(ByRef RectF, x, y, w, h)</p>
+<p>CreateSizeF(ByRef SizeF, w, h)</p>
+<p>CreateDIBSection</p>
+<p></p>
+<p>#####################################################################################</p>
+<p>Function:     			UpdateLayeredWindow</p>
+<p>Description:  			Updates a layered window with the handle to the DC of a gdi bitmap</p>
+<p></p>
+<p>hwnd        				Handle of the layered window to update</p>
+<p>hdc           			Handle to the DC of the GDI bitmap to update the window with</p>
+<p>Layeredx      			x position to place the window</p>
+<p>Layeredy      			y position to place the window</p>
+<p>Layeredw      			Width of the window</p>
+<p>Layeredh      			Height of the window</p>
+<p>Alpha         			Default = 255 : The transparency (0-255) to set the window transparency</p>
+<p></p>
+<p>return      				If the function succeeds, the return value is nonzero</p>
+<p></p>
+<p>notes						If x or y omitted, then layered window will use its current coordinates</p>
+<p>If w or h omitted then current width and height will be used</p>
+<p></p>
+<p><center><strong><q>2713 LINES </q></strong></center></p>
+</ul>
+
+</ul>
+<h1 id="Functions">Functions</h1>
+<ul>
+<code>UpdateLayeredWindow(hwnd, hdc, x="", y="", w="", h="", Alpha=255)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>BitBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, Raster="")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				BitBlt</blockquote><br/> 
+<blockquote>Description			The BitBlt function performs a bit-block transfer of the color data corresponding to a rectangle</blockquote><br/> 
+<blockquote>of pixels from the specified source device context into a destination device context.</blockquote><br/> 
+<blockquote>dDC					handle to destination DC</blockquote><br/> 
+<blockquote>dx					x-coord of destination upper-left corner</blockquote><br/> 
+<blockquote>dy					y-coord of destination upper-left corner</blockquote><br/> 
+<blockquote>dw					width of the area to copy</blockquote><br/> 
+<blockquote>dh					height of the area to copy</blockquote><br/> 
+<blockquote>sDC					handle to source DC</blockquote><br/> 
+<blockquote>sx					x-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>sy					y-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>Raster				raster operation code</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is nonzero</blockquote><br/> 
+<blockquote>notes					If no raster operation is specified, then SRCCOPY is used, which copies the source directly to the destination rectangle</blockquote><br/> 
+<blockquote>BLACKNESS				= 0x00000042</blockquote><br/> 
+<blockquote>NOTSRCERASE			= 0x001100A6</blockquote><br/> 
+<blockquote>NOTSRCCOPY			= 0x00330008</blockquote><br/> 
+<blockquote>SRCERASE				= 0x00440328</blockquote><br/> 
+<blockquote>DSTINVERT				= 0x00550009</blockquote><br/> 
+<blockquote>PATINVERT				= 0x005A0049</blockquote><br/> 
+<blockquote>SRCINVERT				= 0x00660046</blockquote><br/> 
+<blockquote>SRCAND				= 0x008800C6</blockquote><br/> 
+<blockquote>MERGEPAINT			= 0x00BB0226</blockquote><br/> 
+<blockquote>MERGECOPY				= 0x00C000CA</blockquote><br/> 
+<blockquote>SRCCOPY				= 0x00CC0020</blockquote><br/> 
+<blockquote>SRCPAINT				= 0x00EE0086</blockquote><br/> 
+<blockquote>PATCOPY				= 0x00F00021</blockquote><br/> 
+<blockquote>PATPAINT				= 0x00FB0A09</blockquote><br/> 
+<blockquote>WHITENESS				= 0x00FF0062</blockquote><br/> 
+<blockquote>CAPTUREBLT			= 0x40000000</blockquote><br/> 
+<blockquote>NOMIRRORBITMAP		= 0x80000000</blockquote><br/> 
+<code>StretchBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, sw, sh, Raster="")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				StretchBlt</blockquote><br/> 
+<blockquote>Description			The StretchBlt function copies a bitmap from a source rectangle into a destination rectangle,</blockquote><br/> 
+<blockquote>stretching or compressing the bitmap to fit the dimensions of the destination rectangle, if necessary.</blockquote><br/> 
+<blockquote>The system stretches or compresses the bitmap according to the stretching mode currently set in the destination device context.</blockquote><br/> 
+<blockquote>ddc					handle to destination DC</blockquote><br/> 
+<blockquote>dx					x-coord of destination upper-left corner</blockquote><br/> 
+<blockquote>dy					y-coord of destination upper-left corner</blockquote><br/> 
+<blockquote>dw					width of destination rectangle</blockquote><br/> 
+<blockquote>dh					height of destination rectangle</blockquote><br/> 
+<blockquote>sdc					handle to source DC</blockquote><br/> 
+<blockquote>sx					x-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>sy					y-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>sw					width of source rectangle</blockquote><br/> 
+<blockquote>sh					height of source rectangle</blockquote><br/> 
+<blockquote>Raster				raster operation code</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is nonzero</blockquote><br/> 
+<blockquote>notes					If no raster operation is specified, then SRCCOPY is used. It uses the same raster operations as BitBlt</blockquote><br/> 
+<code>SetStretchBltMode(hdc, iStretchMode=4)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				SetStretchBltMode</blockquote><br/> 
+<blockquote>Description			The SetStretchBltMode function sets the bitmap stretching mode in the specified device context</blockquote><br/> 
+<blockquote>hdc					handle to the DC</blockquote><br/> 
+<blockquote>iStretchMode			The stretching mode, describing how the target will be stretched</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is the previous stretching mode. If it fails it will return 0</blockquote><br/> 
+<blockquote>STRETCH_ANDSCANS 		= 0x01</blockquote><br/> 
+<blockquote>STRETCH_ORSCANS 		= 0x02</blockquote><br/> 
+<blockquote>STRETCH_DELETESCANS 	= 0x03</blockquote><br/> 
+<blockquote>STRETCH_HALFTONE 		= 0x04</blockquote><br/> 
+<code>SetImage(hwnd, hBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				SetImage</blockquote><br/> 
+<blockquote>Description			Associates a new image with a static control</blockquote><br/> 
+<blockquote>hwnd					handle of the control to update</blockquote><br/> 
+<blockquote>hBitmap				a gdi bitmap to associate the static control with</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is nonzero</blockquote><br/> 
+<code>SetSysColorToControl(hwnd, SysColor=15)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				SetSysColorToControl</blockquote><br/> 
+<blockquote>Description			Sets a solid colour to a control</blockquote><br/> 
+<blockquote>hwnd					handle of the control to update</blockquote><br/> 
+<blockquote>SysColor				A system colour to set to the control</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is zero</blockquote><br/> 
+<blockquote>notes					A control must have the 0xE style set to it so it is recognised as a bitmap</blockquote><br/> 
+<blockquote>By default SysColor=15 is used which is COLOR_3DFACE. This is the standard background for a control</blockquote><br/> 
+<blockquote>COLOR_3DDKSHADOW				= 21</blockquote><br/> 
+<blockquote>COLOR_3DFACE					= 15</blockquote><br/> 
+<blockquote>COLOR_3DHIGHLIGHT				= 20</blockquote><br/> 
+<blockquote>COLOR_3DHILIGHT				= 20</blockquote><br/> 
+<blockquote>COLOR_3DLIGHT					= 22</blockquote><br/> 
+<blockquote>COLOR_3DSHADOW				= 16</blockquote><br/> 
+<blockquote>COLOR_ACTIVEBORDER			= 10</blockquote><br/> 
+<blockquote>COLOR_ACTIVECAPTION			= 2</blockquote><br/> 
+<blockquote>COLOR_APPWORKSPACE			= 12</blockquote><br/> 
+<blockquote>COLOR_BACKGROUND				= 1</blockquote><br/> 
+<blockquote>COLOR_BTNFACE					= 15</blockquote><br/> 
+<blockquote>COLOR_BTNHIGHLIGHT			= 20</blockquote><br/> 
+<blockquote>COLOR_BTNHILIGHT				= 20</blockquote><br/> 
+<blockquote>COLOR_BTNSHADOW				= 16</blockquote><br/> 
+<blockquote>COLOR_BTNTEXT					= 18</blockquote><br/> 
+<blockquote>COLOR_CAPTIONTEXT				= 9</blockquote><br/> 
+<blockquote>COLOR_DESKTOP					= 1</blockquote><br/> 
+<blockquote>COLOR_GRADIENTACTIVECAPTION	= 27</blockquote><br/> 
+<blockquote>COLOR_GRADIENTINACTIVECAPTION	= 28</blockquote><br/> 
+<blockquote>COLOR_GRAYTEXT				= 17</blockquote><br/> 
+<blockquote>COLOR_HIGHLIGHT				= 13</blockquote><br/> 
+<blockquote>COLOR_HIGHLIGHTTEXT			= 14</blockquote><br/> 
+<blockquote>COLOR_HOTLIGHT				= 26</blockquote><br/> 
+<blockquote>COLOR_INACTIVEBORDER			= 11</blockquote><br/> 
+<blockquote>COLOR_INACTIVECAPTION			= 3</blockquote><br/> 
+<blockquote>COLOR_INACTIVECAPTIONTEXT		= 19</blockquote><br/> 
+<blockquote>COLOR_INFOBK					= 24</blockquote><br/> 
+<blockquote>COLOR_INFOTEXT				= 23</blockquote><br/> 
+<blockquote>COLOR_MENU					= 4</blockquote><br/> 
+<blockquote>COLOR_MENUHILIGHT				= 29</blockquote><br/> 
+<blockquote>COLOR_MENUBAR					= 30</blockquote><br/> 
+<blockquote>COLOR_MENUTEXT				= 7</blockquote><br/> 
+<blockquote>COLOR_SCROLLBAR				= 0</blockquote><br/> 
+<blockquote>COLOR_WINDOW					= 5</blockquote><br/> 
+<blockquote>COLOR_WINDOWFRAME				= 6</blockquote><br/> 
+<blockquote>COLOR_WINDOWTEXT				= 8</blockquote><br/> 
+<code>Gdip_BitmapFromScreen(Screen=0, Raster="")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_BitmapFromScreen</blockquote><br/> 
+<blockquote>Description			Gets a gdi+ bitmap from the screen</blockquote><br/> 
+<blockquote>Screen				0 = All screens</blockquote><br/> 
+<blockquote>Any numerical value = Just that screen</blockquote><br/> 
+<blockquote>x|y|w|h = Take specific coordinates with a width and height</blockquote><br/> 
+<blockquote>Raster				raster operation code</blockquote><br/> 
+<blockquote>return      			If the function succeeds, the return value is a pointer to a gdi+ bitmap</blockquote><br/> 
+<blockquote>-1:		one or more of x,y,w,h not passed properly</blockquote><br/> 
+<blockquote>notes					If no raster operation is specified, then SRCCOPY is used to the returned bitmap</blockquote><br/> 
+<code>Gdip_BitmapFromHWND(hwnd)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_BitmapFromHWND</blockquote><br/> 
+<blockquote>Description			Uses PrintWindow to get a handle to the specified window and return a bitmap from it</blockquote><br/> 
+<blockquote>hwnd					handle to the window to get a bitmap from</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is a pointer to a gdi+ bitmap</blockquote><br/> 
+<blockquote>notes					Window must not be not minimised in order to get a handle to it's client area</blockquote><br/> 
+<code>CreateRectF(ByRef RectF, x, y, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function    			CreateRectF</blockquote><br/> 
+<blockquote>Description			Creates a RectF object, containing a the coordinates and dimensions of a rectangle</blockquote><br/> 
+<blockquote>RectF       			Name to call the RectF object</blockquote><br/> 
+<blockquote>x            			x-coordinate of the upper left corner of the rectangle</blockquote><br/> 
+<blockquote>y            			y-coordinate of the upper left corner of the rectangle</blockquote><br/> 
+<blockquote>w            			Width of the rectangle</blockquote><br/> 
+<blockquote>h            			Height of the rectangle</blockquote><br/> 
+<blockquote>return      			No return value</blockquote><br/> 
+<code>CreateRect(ByRef Rect, x, y, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function    			CreateRect</blockquote><br/> 
+<blockquote>Description			Creates a Rect object, containing a the coordinates and dimensions of a rectangle</blockquote><br/> 
+<blockquote>RectF       			Name to call the RectF object</blockquote><br/> 
+<blockquote>x            			x-coordinate of the upper left corner of the rectangle</blockquote><br/> 
+<blockquote>y            			y-coordinate of the upper left corner of the rectangle</blockquote><br/> 
+<blockquote>w            			Width of the rectangle</blockquote><br/> 
+<blockquote>h            			Height of the rectangle</blockquote><br/> 
+<blockquote>return      			No return value</blockquote><br/> 
+<code>CreateSizeF(ByRef SizeF, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function		    	CreateSizeF</blockquote><br/> 
+<blockquote>Description			Creates a SizeF object, containing an 2 values</blockquote><br/> 
+<blockquote>SizeF         		Name to call the SizeF object</blockquote><br/> 
+<blockquote>w            			w-value for the SizeF object</blockquote><br/> 
+<blockquote>h            			h-value for the SizeF object</blockquote><br/> 
+<blockquote>return      			No Return value</blockquote><br/> 
+<code>CreatePointF(ByRef PointF, x, y)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function		    	CreatePointF</blockquote><br/> 
+<blockquote>Description			Creates a SizeF object, containing an 2 values</blockquote><br/> 
+<blockquote>SizeF         		Name to call the SizeF object</blockquote><br/> 
+<blockquote>w            			w-value for the SizeF object</blockquote><br/> 
+<blockquote>h            			h-value for the SizeF object</blockquote><br/> 
+<blockquote>return      			No Return value</blockquote><br/> 
+<code>CreateDIBSection(w, h, hdc="", bpp=32, ByRef ppvBits=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				CreateDIBSection</blockquote><br/> 
+<blockquote>Description			The CreateDIBSection function creates a DIB (Device Independent Bitmap) that applications can write to directly</blockquote><br/> 
+<blockquote>w						width of the bitmap to create</blockquote><br/> 
+<blockquote>h						height of the bitmap to create</blockquote><br/> 
+<blockquote>hdc					a handle to the device context to use the palette from</blockquote><br/> 
+<blockquote>bpp					bits per pixel (32 = ARGB)</blockquote><br/> 
+<blockquote>ppvBits				A pointer to a variable that receives a pointer to the location of the DIB bit values</blockquote><br/> 
+<blockquote>return				returns a DIB. A gdi bitmap</blockquote><br/> 
+<blockquote>notes					ppvBits will receive the location of the pixels in the DIB</blockquote><br/> 
+<code>PrintWindow(hwnd, hdc, Flags=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				PrintWindow</blockquote><br/> 
+<blockquote>Description			The PrintWindow function copies a visual window into the specified device context (DC), typically a printer DC</blockquote><br/> 
+<blockquote>hwnd					A handle to the window that will be copied</blockquote><br/> 
+<blockquote>hdc					A handle to the device context</blockquote><br/> 
+<blockquote>Flags					Drawing options</blockquote><br/> 
+<blockquote>return				If the function succeeds, it returns a nonzero value</blockquote><br/> 
+<blockquote>PW_CLIENTONLY			= 1</blockquote><br/> 
+<code>DestroyIcon(hIcon)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				DestroyIcon</blockquote><br/> 
+<blockquote>Description			Destroys an icon and frees any memory the icon occupied</blockquote><br/> 
+<blockquote>hIcon					Handle to the icon to be destroyed. The icon must not be in use</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is nonzero</blockquote><br/> 
+<code>PaintDesktop(hdc)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>CreateCompatibleBitmap(hdc, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>CreateCompatibleDC(hdc=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				CreateCompatibleDC</blockquote><br/> 
+<blockquote>Description			This function creates a memory device context (DC) compatible with the specified device</blockquote><br/> 
+<blockquote>hdc					Handle to an existing device context</blockquote><br/> 
+<blockquote>return				returns the handle to a device context or 0 on failure</blockquote><br/> 
+<blockquote>notes					If this handle is 0 (by default), the function creates a memory device context compatible with the application's current screen</blockquote><br/> 
+<code>SelectObject(hdc, hgdiobj)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				SelectObject</blockquote><br/> 
+<blockquote>Description			The SelectObject function selects an object into the specified device context (DC). The new object replaces the previous object of the same type</blockquote><br/> 
+<blockquote>hdc					Handle to a DC</blockquote><br/> 
+<blockquote>hgdiobj				A handle to the object to be selected into the DC</blockquote><br/> 
+<blockquote>return				If the selected object is not a region and the function succeeds, the return value is a handle to the object being replaced</blockquote><br/> 
+<blockquote>notes					The specified object must have been created by using one of the following functions</blockquote><br/> 
+<blockquote>Bitmap - CreateBitmap, CreateBitmapIndirect, CreateCompatibleBitmap, CreateDIBitmap, CreateDIBSection (A single bitmap cannot be selected into more than one DC at the same time)</blockquote><br/> 
+<blockquote>Brush - CreateBrushIndirect, CreateDIBPatternBrush, CreateDIBPatternBrushPt, CreateHatchBrush, CreatePatternBrush, CreateSolidBrush</blockquote><br/> 
+<blockquote>Font - CreateFont, CreateFontIndirect</blockquote><br/> 
+<blockquote>Pen - CreatePen, CreatePenIndirect</blockquote><br/> 
+<blockquote>Region - CombineRgn, CreateEllipticRgn, CreateEllipticRgnIndirect, CreatePolygonRgn, CreateRectRgn, CreateRectRgnIndirect</blockquote><br/> 
+<blockquote>notes					If the selected object is a region and the function succeeds, the return value is one of the following value</blockquote><br/> 
+<blockquote>SIMPLEREGION			= 2 Region consists of a single rectangle</blockquote><br/> 
+<blockquote>COMPLEXREGION			= 3 Region consists of more than one rectangle</blockquote><br/> 
+<blockquote>NULLREGION			= 1 Region is empty</blockquote><br/> 
+<code>DeleteObject(hObject)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				DeleteObject</blockquote><br/> 
+<blockquote>Description			This function deletes a logical pen, brush, font, bitmap, region, or palette, freeing all system resources associated with the object</blockquote><br/> 
+<blockquote>After the object is deleted, the specified handle is no longer valid</blockquote><br/> 
+<blockquote>hObject				Handle to a logical pen, brush, font, bitmap, region, or palette to delete</blockquote><br/> 
+<blockquote>return				Nonzero indicates success. Zero indicates that the specified handle is not valid or that the handle is currently selected into a device context</blockquote><br/> 
+<code>GetDC(hwnd=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				GetDC</blockquote><br/> 
+<blockquote>Description			This function retrieves a handle to a display device context (DC) for the client area of the specified window.</blockquote><br/> 
+<blockquote>The display device context can be used in subsequent graphics display interface (GDI) functions to draw in the client area of the window.</blockquote><br/> 
+<blockquote>hwnd					Handle to the window whose device context is to be retrieved. If this value is NULL, GetDC retrieves the device context for the entire screen</blockquote><br/> 
+<blockquote>return				The handle the device context for the specified window's client area indicates success. NULL indicates failure</blockquote><br/> 
+<code>GetDCEx(hwnd, flags=0, hrgnClip=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>DCX_CACHE = 0x2</blockquote><br/> 
+<blockquote>DCX_CLIPCHILDREN = 0x8</blockquote><br/> 
+<blockquote>DCX_CLIPSIBLINGS = 0x10</blockquote><br/> 
+<blockquote>DCX_EXCLUDERGN = 0x40</blockquote><br/> 
+<blockquote>DCX_EXCLUDEUPDATE = 0x100</blockquote><br/> 
+<blockquote>DCX_INTERSECTRGN = 0x80</blockquote><br/> 
+<blockquote>DCX_INTERSECTUPDATE = 0x200</blockquote><br/> 
+<blockquote>DCX_LOCKWINDOWUPDATE = 0x400</blockquote><br/> 
+<blockquote>DCX_NORECOMPUTE = 0x100000</blockquote><br/> 
+<blockquote>DCX_NORESETATTRS = 0x4</blockquote><br/> 
+<blockquote>DCX_PARENTCLIP = 0x20</blockquote><br/> 
+<blockquote>DCX_VALIDATE = 0x200000</blockquote><br/> 
+<blockquote>DCX_WINDOW = 0x1</blockquote><br/> 
+<code>ReleaseDC(hdc, hwnd=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				ReleaseDC</blockquote><br/> 
+<blockquote>Description			This function releases a device context (DC), freeing it for use by other applications. The effect of ReleaseDC depends on the type of device context</blockquote><br/> 
+<blockquote>hdc					Handle to the device context to be released</blockquote><br/> 
+<blockquote>hwnd					Handle to the window whose device context is to be released</blockquote><br/> 
+<blockquote>return				1 = released</blockquote><br/> 
+<blockquote>0 = not released</blockquote><br/> 
+<blockquote>notes					The application must call the ReleaseDC function for each call to the GetWindowDC function and for each call to the GetDC function that retrieves a common device context</blockquote><br/> 
+<blockquote>An application cannot use the ReleaseDC function to release a device context that was created by calling the CreateDC function</blockquote><br/> 
+<code>DeleteDC(hdc)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				DeleteDC</blockquote><br/> 
+<blockquote>Description			The DeleteDC function deletes the specified device context (DC)</blockquote><br/> 
+<blockquote>hdc					A handle to the device context</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is nonzero</blockquote><br/> 
+<blockquote>notes					An application must not delete a DC whose handle was obtained by calling the GetDC function. Instead, it must call the ReleaseDC function to free the DC</blockquote><br/> 
+<code>Gdip_LibraryVersion()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_LibraryVersion</blockquote><br/> 
+<blockquote>Description			Get the current library version</blockquote><br/> 
+<blockquote>return				the library version</blockquote><br/> 
+<blockquote>notes					This is useful for non compiled programs to ensure that a person doesn't run an old version when testing your scripts</blockquote><br/> 
+<code>Gdip_LibrarySubVersion()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_LibrarySubVersion</blockquote><br/> 
+<blockquote>Description			Get the current library sub version</blockquote><br/> 
+<blockquote>return				the library sub version</blockquote><br/> 
+<blockquote>notes					This is the sub-version currently maintained by Rseding91</blockquote><br/> 
+<code>Gdip_BitmapFromBRA(ByRef BRAFromMemIn, File, Alternate=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function:    			Gdip_BitmapFromBRA</blockquote><br/> 
+<blockquote>Description: 			Gets a pointer to a gdi+ bitmap from a BRA file</blockquote><br/> 
+<blockquote>BRAFromMemIn			The variable for a BRA file read to memory</blockquote><br/> 
+<blockquote>File					The name of the file, or its number that you would like (This depends on alternate parameter)</blockquote><br/> 
+<blockquote>Alternate				Changes whether the File parameter is the file name or its number</blockquote><br/> 
+<blockquote>return      			If the function succeeds, the return value is a pointer to a gdi+ bitmap</blockquote><br/> 
+<blockquote>-1 = The BRA variable is empty</blockquote><br/> 
+<blockquote>-2 = The BRA has an incorrect header</blockquote><br/> 
+<blockquote>-3 = The BRA has information missing</blockquote><br/> 
+<blockquote>-4 = Could not find file inside the BRA</blockquote><br/> 
+<code>Gdip_DrawRectangle(pGraphics, pPen, x, y, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawRectangle</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw the outline of a rectangle into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>x						x-coordinate of the top left of the rectangle</blockquote><br/> 
+<blockquote>y						y-coordinate of the top left of the rectangle</blockquote><br/> 
+<blockquote>w						width of the rectanlge</blockquote><br/> 
+<blockquote>h						height of the rectangle</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					as all coordinates are taken from the top left of each pixel, then the entire width/height should be specified as subtracting the pen width</blockquote><br/> 
+<code>Gdip_DrawRoundedRectangle(pGraphics, pPen, x, y, w, h, r)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawRoundedRectangle</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw the outline of a rounded rectangle into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>x						x-coordinate of the top left of the rounded rectangle</blockquote><br/> 
+<blockquote>y						y-coordinate of the top left of the rounded rectangle</blockquote><br/> 
+<blockquote>w						width of the rectanlge</blockquote><br/> 
+<blockquote>h						height of the rectangle</blockquote><br/> 
+<blockquote>r						radius of the rounded corners</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					as all coordinates are taken from the top left of each pixel, then the entire width/height should be specified as subtracting the pen width</blockquote><br/> 
+<code>Gdip_DrawEllipse(pGraphics, pPen, x, y, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawEllipse</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw the outline of an ellipse into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>x						x-coordinate of the top left of the rectangle the ellipse will be drawn into</blockquote><br/> 
+<blockquote>y						y-coordinate of the top left of the rectangle the ellipse will be drawn into</blockquote><br/> 
+<blockquote>w						width of the ellipse</blockquote><br/> 
+<blockquote>h						height of the ellipse</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					as all coordinates are taken from the top left of each pixel, then the entire width/height should be specified as subtracting the pen width</blockquote><br/> 
+<code>Gdip_DrawBezier(pGraphics, pPen, x1, y1, x2, y2, x3, y3, x4, y4)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawBezier</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw the outline of a bezier (a weighted curve) into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>x1					x-coordinate of the start of the bezier</blockquote><br/> 
+<blockquote>y1					y-coordinate of the start of the bezier</blockquote><br/> 
+<blockquote>x2					x-coordinate of the first arc of the bezier</blockquote><br/> 
+<blockquote>y2					y-coordinate of the first arc of the bezier</blockquote><br/> 
+<blockquote>x3					x-coordinate of the second arc of the bezier</blockquote><br/> 
+<blockquote>y3					y-coordinate of the second arc of the bezier</blockquote><br/> 
+<blockquote>x4					x-coordinate of the end of the bezier</blockquote><br/> 
+<blockquote>y4					y-coordinate of the end of the bezier</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					as all coordinates are taken from the top left of each pixel, then the entire width/height should be specified as subtracting the pen width</blockquote><br/> 
+<code>Gdip_DrawArc(pGraphics, pPen, x, y, w, h, StartAngle, SweepAngle)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawArc</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw the outline of an arc into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>x						x-coordinate of the start of the arc</blockquote><br/> 
+<blockquote>y						y-coordinate of the start of the arc</blockquote><br/> 
+<blockquote>w						width of the arc</blockquote><br/> 
+<blockquote>h						height of the arc</blockquote><br/> 
+<blockquote>StartAngle			specifies the angle between the x-axis and the starting point of the arc</blockquote><br/> 
+<blockquote>SweepAngle			specifies the angle between the starting and ending points of the arc</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					as all coordinates are taken from the top left of each pixel, then the entire width/height should be specified as subtracting the pen width</blockquote><br/> 
+<code>Gdip_DrawPie(pGraphics, pPen, x, y, w, h, StartAngle, SweepAngle)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawPie</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw the outline of a pie into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>x						x-coordinate of the start of the pie</blockquote><br/> 
+<blockquote>y						y-coordinate of the start of the pie</blockquote><br/> 
+<blockquote>w						width of the pie</blockquote><br/> 
+<blockquote>h						height of the pie</blockquote><br/> 
+<blockquote>StartAngle			specifies the angle between the x-axis and the starting point of the pie</blockquote><br/> 
+<blockquote>SweepAngle			specifies the angle between the starting and ending points of the pie</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					as all coordinates are taken from the top left of each pixel, then the entire width/height should be specified as subtracting the pen width</blockquote><br/> 
+<code>Gdip_DrawLine(pGraphics, pPen, x1, y1, x2, y2)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawLine</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw a line into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>x1					x-coordinate of the start of the line</blockquote><br/> 
+<blockquote>y1					y-coordinate of the start of the line</blockquote><br/> 
+<blockquote>x2					x-coordinate of the end of the line</blockquote><br/> 
+<blockquote>y2					y-coordinate of the end of the line</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_DrawLines(pGraphics, pPen, Points)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawLines</blockquote><br/> 
+<blockquote>Description			This function uses a pen to draw a series of joined lines into the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pPen					Pointer to a pen</blockquote><br/> 
+<blockquote>Points				the coordinates of all the points passed as x1,y1|x2,y2|x3,y3.....</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_FillRectangle(pGraphics, pBrush, x, y, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_FillRectangle</blockquote><br/> 
+<blockquote>Description			This function uses a brush to fill a rectangle in the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBrush				Pointer to a brush</blockquote><br/> 
+<blockquote>x						x-coordinate of the top left of the rectangle</blockquote><br/> 
+<blockquote>y						y-coordinate of the top left of the rectangle</blockquote><br/> 
+<blockquote>w						width of the rectanlge</blockquote><br/> 
+<blockquote>h						height of the rectangle</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_FillRoundedRectangle(pGraphics, pBrush, x, y, w, h, r)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_FillRoundedRectangle</blockquote><br/> 
+<blockquote>Description			This function uses a brush to fill a rounded rectangle in the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBrush				Pointer to a brush</blockquote><br/> 
+<blockquote>x						x-coordinate of the top left of the rounded rectangle</blockquote><br/> 
+<blockquote>y						y-coordinate of the top left of the rounded rectangle</blockquote><br/> 
+<blockquote>w						width of the rectanlge</blockquote><br/> 
+<blockquote>h						height of the rectangle</blockquote><br/> 
+<blockquote>r						radius of the rounded corners</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_FillPolygon(pGraphics, pBrush, Points, FillMode=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_FillPolygon</blockquote><br/> 
+<blockquote>Description			This function uses a brush to fill a polygon in the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBrush				Pointer to a brush</blockquote><br/> 
+<blockquote>Points				the coordinates of all the points passed as x1,y1|x2,y2|x3,y3.....</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					Alternate will fill the polygon as a whole, wheras winding will fill each new "segment"</blockquote><br/> 
+<blockquote>Alternate 			= 0</blockquote><br/> 
+<blockquote>Winding 				= 1</blockquote><br/> 
+<code>Gdip_FillPie(pGraphics, pBrush, x, y, w, h, StartAngle, SweepAngle)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_FillPie</blockquote><br/> 
+<blockquote>Description			This function uses a brush to fill a pie in the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBrush				Pointer to a brush</blockquote><br/> 
+<blockquote>x						x-coordinate of the top left of the pie</blockquote><br/> 
+<blockquote>y						y-coordinate of the top left of the pie</blockquote><br/> 
+<blockquote>w						width of the pie</blockquote><br/> 
+<blockquote>h						height of the pie</blockquote><br/> 
+<blockquote>StartAngle			specifies the angle between the x-axis and the starting point of the pie</blockquote><br/> 
+<blockquote>SweepAngle			specifies the angle between the starting and ending points of the pie</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_FillEllipse(pGraphics, pBrush, x, y, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_FillEllipse</blockquote><br/> 
+<blockquote>Description			This function uses a brush to fill an ellipse in the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBrush				Pointer to a brush</blockquote><br/> 
+<blockquote>x						x-coordinate of the top left of the ellipse</blockquote><br/> 
+<blockquote>y						y-coordinate of the top left of the ellipse</blockquote><br/> 
+<blockquote>w						width of the ellipse</blockquote><br/> 
+<blockquote>h						height of the ellipse</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_FillRegion(pGraphics, pBrush, Region)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_FillRegion</blockquote><br/> 
+<blockquote>Description			This function uses a brush to fill a region in the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBrush				Pointer to a brush</blockquote><br/> 
+<blockquote>Region				Pointer to a Region</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					You can create a region Gdip_CreateRegion() and then add to this</blockquote><br/> 
+<code>Gdip_FillPath(pGraphics, pBrush, Path)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_FillPath</blockquote><br/> 
+<blockquote>Description			This function uses a brush to fill a path in the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBrush				Pointer to a brush</blockquote><br/> 
+<blockquote>Region				Pointer to a Path</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_DrawImagePointsRect(pGraphics, pBitmap, Points, sx="", sy="", sw="", sh="", Matrix=1)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawImagePointsRect</blockquote><br/> 
+<blockquote>Description			This function draws a bitmap into the Graphics of another bitmap and skews it</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap to be drawn</blockquote><br/> 
+<blockquote>Points				Points passed as x1,y1|x2,y2|x3,y3 (3 points: top left, top right, bottom left) describing the drawing of the bitmap</blockquote><br/> 
+<blockquote>sx					x-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>sy					y-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>sw					width of source rectangle</blockquote><br/> 
+<blockquote>sh					height of source rectangle</blockquote><br/> 
+<blockquote>Matrix				a matrix used to alter image attributes when drawing</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					if sx,sy,sw,sh are missed then the entire source bitmap will be used</blockquote><br/> 
+<blockquote>Matrix can be omitted to just draw with no alteration to ARGB</blockquote><br/> 
+<blockquote>Matrix may be passed as a digit from 0 - 1 to change just transparency</blockquote><br/> 
+<blockquote>Matrix can be passed as a matrix with any delimiter</blockquote><br/> 
+<code>Gdip_DrawImage(pGraphics, pBitmap, dx="", dy="", dw="", dh="", sx="", sy="", sw="", sh="", Matrix=1)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_DrawImage</blockquote><br/> 
+<blockquote>Description			This function draws a bitmap into the Graphics of another bitmap</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the Graphics of a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap to be drawn</blockquote><br/> 
+<blockquote>dx					x-coord of destination upper-left corner</blockquote><br/> 
+<blockquote>dy					y-coord of destination upper-left corner</blockquote><br/> 
+<blockquote>dw					width of destination image</blockquote><br/> 
+<blockquote>dh					height of destination image</blockquote><br/> 
+<blockquote>sx					x-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>sy					y-coordinate of source upper-left corner</blockquote><br/> 
+<blockquote>sw					width of source image</blockquote><br/> 
+<blockquote>sh					height of source image</blockquote><br/> 
+<blockquote>Matrix				a matrix used to alter image attributes when drawing</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					if sx,sy,sw,sh are missed then the entire source bitmap will be used</blockquote><br/> 
+<blockquote>Gdip_DrawImage performs faster</blockquote><br/> 
+<blockquote>Matrix can be omitted to just draw with no alteration to ARGB</blockquote><br/> 
+<blockquote>Matrix may be passed as a digit from 0 - 1 to change just transparency</blockquote><br/> 
+<blockquote>Matrix can be passed as a matrix with any delimiter. For example:</blockquote><br/> 
+<blockquote>MatrixBright=</blockquote><br/> 
+<code>(</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>1.5		|0		|0		|0		|0</blockquote><br/> 
+<blockquote>0		|1.5	|0		|0		|0</blockquote><br/> 
+<blockquote>0		|0		|1.5	|0		|0</blockquote><br/> 
+<blockquote>0		|0		|0		|1		|0</blockquote><br/> 
+<blockquote>0.05	|0.05	|0.05	|0		|1</blockquote><br/> 
+<code>)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>notes					MatrixBright = 1.5|0|0|0|0|0|1.5|0|0|0|0|0|1.5|0|0|0|0|0|1|0|0.05|0.05|0.05|0|1</blockquote><br/> 
+<blockquote>MatrixGreyScale = 0.299|0.299|0.299|0|0|0.587|0.587|0.587|0|0|0.114|0.114|0.114|0|0|0|0|0|1|0|0|0|0|0|1</blockquote><br/> 
+<blockquote>MatrixNegative = -1|0|0|0|0|0|-1|0|0|0|0|0|-1|0|0|0|0|0|1|0|0|0|0|0|1</blockquote><br/> 
+<code>Gdip_SetImageAttributesColorMatrix(Matrix)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_SetImageAttributesColorMatrix</blockquote><br/> 
+<blockquote>Description			This function creates an image matrix ready for drawing</blockquote><br/> 
+<blockquote>Matrix				a matrix used to alter image attributes when drawing</blockquote><br/> 
+<blockquote>passed with any delimeter</blockquote><br/> 
+<blockquote>return				returns an image matrix on sucess or 0 if it fails</blockquote><br/> 
+<blockquote>notes					MatrixBright = 1.5|0|0|0|0|0|1.5|0|0|0|0|0|1.5|0|0|0|0|0|1|0|0.05|0.05|0.05|0|1</blockquote><br/> 
+<blockquote>MatrixGreyScale = 0.299|0.299|0.299|0|0|0.587|0.587|0.587|0|0|0.114|0.114|0.114|0|0|0|0|0|1|0|0|0|0|0|1</blockquote><br/> 
+<blockquote>MatrixNegative = -1|0|0|0|0|0|-1|0|0|0|0|0|-1|0|0|0|0|0|1|0|0|0|0|0|1</blockquote><br/> 
+<code>Gdip_GraphicsFromImage(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GraphicsFromImage</blockquote><br/> 
+<blockquote>Description			This function gets the graphics for a bitmap used for drawing functions</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap to get the pointer to its graphics</blockquote><br/> 
+<blockquote>return				returns a pointer to the graphics of a bitmap</blockquote><br/> 
+<blockquote>notes					a bitmap can be drawn into the graphics of another bitmap</blockquote><br/> 
+<code>Gdip_GraphicsFromHDC(hdc)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GraphicsFromHDC</blockquote><br/> 
+<blockquote>Description			This function gets the graphics from the handle to a device context</blockquote><br/> 
+<blockquote>hdc					This is the handle to the device context</blockquote><br/> 
+<blockquote>return				returns a pointer to the graphics of a bitmap</blockquote><br/> 
+<blockquote>notes					You can draw a bitmap into the graphics of another bitmap</blockquote><br/> 
+<code>Gdip_GetDC(pGraphics)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GetDC</blockquote><br/> 
+<blockquote>Description			This function gets the device context of the passed Graphics</blockquote><br/> 
+<blockquote>hdc					This is the handle to the device context</blockquote><br/> 
+<blockquote>return				returns the device context for the graphics of a bitmap</blockquote><br/> 
+<code>Gdip_ReleaseDC(pGraphics, hdc)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_ReleaseDC</blockquote><br/> 
+<blockquote>Description			This function releases a device context from use for further use</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the graphics of a bitmap</blockquote><br/> 
+<blockquote>hdc					This is the handle to the device context</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_GraphicsClear(pGraphics, ARGB=0x00ffffff)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GraphicsClear</blockquote><br/> 
+<blockquote>Description			Clears the graphics of a bitmap ready for further drawing</blockquote><br/> 
+<blockquote>pGraphics				Pointer to the graphics of a bitmap</blockquote><br/> 
+<blockquote>ARGB					The colour to clear the graphics to</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<blockquote>notes					By default this will make the background invisible</blockquote><br/> 
+<blockquote>Using clipping regions you can clear a particular area on the graphics rather than clearing the entire graphics</blockquote><br/> 
+<code>Gdip_BlurBitmap(pBitmap, Blur)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_BlurBitmap</blockquote><br/> 
+<blockquote>Description			Gives a pointer to a blurred bitmap from a pointer to a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap to be blurred</blockquote><br/> 
+<blockquote>Blur					The Amount to blur a bitmap by from 1 (least blur) to 100 (most blur)</blockquote><br/> 
+<blockquote>return				If the function succeeds, the return value is a pointer to the new blurred bitmap</blockquote><br/> 
+<blockquote>-1 = The blur parameter is outside the range 1-100</blockquote><br/> 
+<blockquote>notes					This function will not dispose of the original bitmap</blockquote><br/> 
+<code>Gdip_SaveBitmapToFile(pBitmap, sOutput, Quality=75)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function:     		Gdip_SaveBitmapToFile</blockquote><br/> 
+<blockquote>Description:  		Saves a bitmap to a file in any supported format onto disk</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap</blockquote><br/> 
+<blockquote>sOutput      			The name of the file that the bitmap will be saved to. Supported extensions are: .BMP,.DIB,.RLE,.JPG,.JPEG,.JPE,.JFIF,.GIF,.TIF,.TIFF,.PNG</blockquote><br/> 
+<blockquote>Quality      			If saving as jpg (.JPG,.JPEG,.JPE,.JFIF) then quality can be 1-100 with default at maximum quality</blockquote><br/> 
+<blockquote>return      			If the function succeeds, the return value is zero, otherwise:</blockquote><br/> 
+<blockquote>-1 = Extension supplied is not a supported file format</blockquote><br/> 
+<blockquote>-2 = Could not get a list of encoders on system</blockquote><br/> 
+<blockquote>-3 = Could not find matching encoder for specified file format</blockquote><br/> 
+<blockquote>-4 = Could not get WideChar name of output file</blockquote><br/> 
+<blockquote>-5 = Could not save file to disk</blockquote><br/> 
+<blockquote>notes					This function will use the extension supplied from the sOutput parameter to determine the output format</blockquote><br/> 
+<code>Gdip_GetPixel(pBitmap, x, y)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GetPixel</blockquote><br/> 
+<blockquote>Description			Gets the ARGB of a pixel in a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap</blockquote><br/> 
+<blockquote>x						x-coordinate of the pixel</blockquote><br/> 
+<blockquote>y						y-coordinate of the pixel</blockquote><br/> 
+<blockquote>return				Returns the ARGB value of the pixel</blockquote><br/> 
+<code>Gdip_SetPixel(pBitmap, x, y, ARGB)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_SetPixel</blockquote><br/> 
+<blockquote>Description			Sets the ARGB of a pixel in a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap</blockquote><br/> 
+<blockquote>x						x-coordinate of the pixel</blockquote><br/> 
+<blockquote>y						y-coordinate of the pixel</blockquote><br/> 
+<blockquote>return				status enumeration. 0 = success</blockquote><br/> 
+<code>Gdip_GetImageWidth(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GetImageWidth</blockquote><br/> 
+<blockquote>Description			Gives the width of a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap</blockquote><br/> 
+<blockquote>return				Returns the width in pixels of the supplied bitmap</blockquote><br/> 
+<code>Gdip_GetImageHeight(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GetImageHeight</blockquote><br/> 
+<blockquote>Description			Gives the height of a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap</blockquote><br/> 
+<blockquote>return				Returns the height in pixels of the supplied bitmap</blockquote><br/> 
+<code>Gdip_GetImageDimensions(pBitmap, ByRef Width, ByRef Height)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GetDimensions</blockquote><br/> 
+<blockquote>Description			Gives the width and height of a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap</blockquote><br/> 
+<blockquote>Width					ByRef variable. This variable will be set to the width of the bitmap</blockquote><br/> 
+<blockquote>Height				ByRef variable. This variable will be set to the height of the bitmap</blockquote><br/> 
+<blockquote>return				No return value</blockquote><br/> 
+<blockquote>Gdip_GetDimensions(pBitmap, ThisWidth, ThisHeight) will set ThisWidth to the width and ThisHeight to the height</blockquote><br/> 
+<code>Gdip_GetDimensions(pBitmap, ByRef Width, ByRef Height)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_GetImagePixelFormat(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_GetDpiX(pGraphics)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Function				Gdip_GetDpiX</blockquote><br/> 
+<blockquote>Description			Gives the horizontal dots per inch of the graphics of a bitmap</blockquote><br/> 
+<blockquote>pBitmap				Pointer to a bitmap</blockquote><br/> 
+<blockquote>Width					ByRef variable. This variable will be set to the width of the bitmap</blockquote><br/> 
+<blockquote>Height				ByRef variable. This variable will be set to the height of the bitmap</blockquote><br/> 
+<blockquote>return				No return value</blockquote><br/> 
+<blockquote>Gdip_GetDimensions(pBitmap, ThisWidth, ThisHeight) will set ThisWidth to the width and ThisHeight to the height</blockquote><br/> 
+<code>Gdip_GetDpiY(pGraphics)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_GetImageHorizontalResolution(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_GetImageVerticalResolution(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_BitmapSetResolution(pBitmap, dpix, dpiy)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateBitmapFromFile(sFile, IconNumber=1, IconSize="")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateBitmapFromHBITMAP(hBitmap, Palette=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateHBITMAPFromBitmap(pBitmap, Background=0xffffffff)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateBitmapFromHICON(hIcon)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateHICONFromBitmap(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateBitmap(Width, Height, Format=0x26200A)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateBitmapFromClipboard()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_SetBitmapToClipboard(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CloneBitmapArea(pBitmap, x, y, w, h, Format=0x26200A)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreatePen(ARGB, w)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Create resources</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreatePenFromBrush(pBrush, w)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_BrushCreateSolid(ARGB=0xff000000)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_BrushCreateHatch(ARGBfront, ARGBback, HatchStyle=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>HatchStyleHorizontal = 0</blockquote><br/> 
+<blockquote>HatchStyleVertical = 1</blockquote><br/> 
+<blockquote>HatchStyleForwardDiagonal = 2</blockquote><br/> 
+<blockquote>HatchStyleBackwardDiagonal = 3</blockquote><br/> 
+<blockquote>HatchStyleCross = 4</blockquote><br/> 
+<blockquote>HatchStyleDiagonalCross = 5</blockquote><br/> 
+<blockquote>HatchStyle05Percent = 6</blockquote><br/> 
+<blockquote>HatchStyle10Percent = 7</blockquote><br/> 
+<blockquote>HatchStyle20Percent = 8</blockquote><br/> 
+<blockquote>HatchStyle25Percent = 9</blockquote><br/> 
+<blockquote>HatchStyle30Percent = 10</blockquote><br/> 
+<blockquote>HatchStyle40Percent = 11</blockquote><br/> 
+<blockquote>HatchStyle50Percent = 12</blockquote><br/> 
+<blockquote>HatchStyle60Percent = 13</blockquote><br/> 
+<blockquote>HatchStyle70Percent = 14</blockquote><br/> 
+<blockquote>HatchStyle75Percent = 15</blockquote><br/> 
+<blockquote>HatchStyle80Percent = 16</blockquote><br/> 
+<blockquote>HatchStyle90Percent = 17</blockquote><br/> 
+<blockquote>HatchStyleLightDownwardDiagonal = 18</blockquote><br/> 
+<blockquote>HatchStyleLightUpwardDiagonal = 19</blockquote><br/> 
+<blockquote>HatchStyleDarkDownwardDiagonal = 20</blockquote><br/> 
+<blockquote>HatchStyleDarkUpwardDiagonal = 21</blockquote><br/> 
+<blockquote>HatchStyleWideDownwardDiagonal = 22</blockquote><br/> 
+<blockquote>HatchStyleWideUpwardDiagonal = 23</blockquote><br/> 
+<blockquote>HatchStyleLightVertical = 24</blockquote><br/> 
+<blockquote>HatchStyleLightHorizontal = 25</blockquote><br/> 
+<blockquote>HatchStyleNarrowVertical = 26</blockquote><br/> 
+<blockquote>HatchStyleNarrowHorizontal = 27</blockquote><br/> 
+<blockquote>HatchStyleDarkVertical = 28</blockquote><br/> 
+<blockquote>HatchStyleDarkHorizontal = 29</blockquote><br/> 
+<blockquote>HatchStyleDashedDownwardDiagonal = 30</blockquote><br/> 
+<blockquote>HatchStyleDashedUpwardDiagonal = 31</blockquote><br/> 
+<blockquote>HatchStyleDashedHorizontal = 32</blockquote><br/> 
+<blockquote>HatchStyleDashedVertical = 33</blockquote><br/> 
+<blockquote>HatchStyleSmallConfetti = 34</blockquote><br/> 
+<blockquote>HatchStyleLargeConfetti = 35</blockquote><br/> 
+<blockquote>HatchStyleZigZag = 36</blockquote><br/> 
+<blockquote>HatchStyleWave = 37</blockquote><br/> 
+<blockquote>HatchStyleDiagonalBrick = 38</blockquote><br/> 
+<blockquote>HatchStyleHorizontalBrick = 39</blockquote><br/> 
+<blockquote>HatchStyleWeave = 40</blockquote><br/> 
+<blockquote>HatchStylePlaid = 41</blockquote><br/> 
+<blockquote>HatchStyleDivot = 42</blockquote><br/> 
+<blockquote>HatchStyleDottedGrid = 43</blockquote><br/> 
+<blockquote>HatchStyleDottedDiamond = 44</blockquote><br/> 
+<blockquote>HatchStyleShingle = 45</blockquote><br/> 
+<blockquote>HatchStyleTrellis = 46</blockquote><br/> 
+<blockquote>HatchStyleSphere = 47</blockquote><br/> 
+<blockquote>HatchStyleSmallGrid = 48</blockquote><br/> 
+<blockquote>HatchStyleSmallCheckerBoard = 49</blockquote><br/> 
+<blockquote>HatchStyleLargeCheckerBoard = 50</blockquote><br/> 
+<blockquote>HatchStyleOutlinedDiamond = 51</blockquote><br/> 
+<blockquote>HatchStyleSolidDiamond = 52</blockquote><br/> 
+<blockquote>HatchStyleTotal = 53</blockquote><br/> 
+<code>Gdip_CreateTextureBrush(pBitmap, WrapMode=1, x=0, y=0, w="", h="")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateLineBrush(x1, y1, x2, y2, ARGB1, ARGB2, WrapMode=1)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>WrapModeTile = 0</blockquote><br/> 
+<blockquote>WrapModeTileFlipX = 1</blockquote><br/> 
+<blockquote>WrapModeTileFlipY = 2</blockquote><br/> 
+<blockquote>WrapModeTileFlipXY = 3</blockquote><br/> 
+<blockquote>WrapModeClamp = 4</blockquote><br/> 
+<code>Gdip_CreateLineBrushFromRect(x, y, w, h, ARGB1, ARGB2, LinearGradientMode=1, WrapMode=1)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>LinearGradientModeHorizontal = 0</blockquote><br/> 
+<blockquote>LinearGradientModeVertical = 1</blockquote><br/> 
+<blockquote>LinearGradientModeForwardDiagonal = 2</blockquote><br/> 
+<blockquote>LinearGradientModeBackwardDiagonal = 3</blockquote><br/> 
+<code>Gdip_CloneBrush(pBrush)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DeletePen(pPen)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Delete resources</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DeleteBrush(pBrush)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DisposeImage(pBitmap)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DeleteGraphics(pGraphics)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DisposeImageAttributes(ImageAttr)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DeleteFont(hFont)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DeleteStringFormat(hFormat)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DeleteFontFamily(hFamily)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DeleteMatrix(Matrix)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_TextToGraphics(pGraphics, Text, Options, Font="Arial", Width="", Height="", Measure=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Text functions</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_DrawString(pGraphics, sString, hFont, hFormat, pBrush, ByRef RectF)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_MeasureString(pGraphics, sString, hFont, hFormat, ByRef RectF)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_SetStringFormatAlign(hFormat, Align)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>Near = 0</blockquote><br/> 
+<blockquote>Center = 1</blockquote><br/> 
+<blockquote>Far = 2</blockquote><br/> 
+<code>Gdip_StringFormatCreate(Format=0, Lang=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>StringFormatFlagsDirectionRightToLeft    = 0x00000001</blockquote><br/> 
+<blockquote>StringFormatFlagsDirectionVertical       = 0x00000002</blockquote><br/> 
+<blockquote>StringFormatFlagsNoFitBlackBox           = 0x00000004</blockquote><br/> 
+<blockquote>StringFormatFlagsDisplayFormatControl    = 0x00000020</blockquote><br/> 
+<blockquote>StringFormatFlagsNoFontFallback          = 0x00000400</blockquote><br/> 
+<blockquote>StringFormatFlagsMeasureTrailingSpaces   = 0x00000800</blockquote><br/> 
+<blockquote>StringFormatFlagsNoWrap                  = 0x00001000</blockquote><br/> 
+<blockquote>StringFormatFlagsLineLimit               = 0x00002000</blockquote><br/> 
+<blockquote>StringFormatFlagsNoClip                  = 0x00004000</blockquote><br/> 
+<code>Gdip_FontCreate(hFamily, Size, Style=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>Regular = 0</blockquote><br/> 
+<blockquote>Bold = 1</blockquote><br/> 
+<blockquote>Italic = 2</blockquote><br/> 
+<blockquote>BoldItalic = 3</blockquote><br/> 
+<blockquote>Underline = 4</blockquote><br/> 
+<blockquote>Strikeout = 8</blockquote><br/> 
+<code>Gdip_FontFamilyCreate(Font)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_CreateAffineMatrix(m11, m12, m21, m22, x, y)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Matrix functions</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_CreateMatrix()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_CreatePath(BrushMode=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>GraphicsPath functions</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Alternate = 0</blockquote><br/> 
+<blockquote>Winding = 1</blockquote><br/> 
+<code>Gdip_AddPathEllipse(Path, x, y, w, h)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_AddPathPolygon(Path, Points)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_DeletePath(Path)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_SetTextRenderingHint(pGraphics, RenderingHint)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Quality functions</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>SystemDefault = 0</blockquote><br/> 
+<blockquote>SingleBitPerPixelGridFit = 1</blockquote><br/> 
+<blockquote>SingleBitPerPixel = 2</blockquote><br/> 
+<blockquote>AntiAliasGridFit = 3</blockquote><br/> 
+<blockquote>AntiAlias = 4</blockquote><br/> 
+<code>Gdip_SetInterpolationMode(pGraphics, InterpolationMode)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>Default = 0</blockquote><br/> 
+<blockquote>LowQuality = 1</blockquote><br/> 
+<blockquote>HighQuality = 2</blockquote><br/> 
+<blockquote>Bilinear = 3</blockquote><br/> 
+<blockquote>Bicubic = 4</blockquote><br/> 
+<blockquote>NearestNeighbor = 5</blockquote><br/> 
+<blockquote>HighQualityBilinear = 6</blockquote><br/> 
+<blockquote>HighQualityBicubic = 7</blockquote><br/> 
+<code>Gdip_SetSmoothingMode(pGraphics, SmoothingMode)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>Default = 0</blockquote><br/> 
+<blockquote>HighSpeed = 1</blockquote><br/> 
+<blockquote>HighQuality = 2</blockquote><br/> 
+<blockquote>None = 3</blockquote><br/> 
+<blockquote>AntiAlias = 4</blockquote><br/> 
+<code>Gdip_SetCompositingMode(pGraphics, CompositingMode=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>CompositingModeSourceOver = 0 (blended)</blockquote><br/> 
+<blockquote>CompositingModeSourceCopy = 1 (overwrite)</blockquote><br/> 
+<code>Gdip_Startup()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>Extra functions</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_Shutdown(pToken)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_RotateWorldTransform(pGraphics, Angle, MatrixOrder=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>Prepend = 0</blockquote><br/> 
+<blockquote>Append = 1</blockquote><br/> 
+<code>Gdip_ScaleWorldTransform(pGraphics, x, y, MatrixOrder=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_TranslateWorldTransform(pGraphics, x, y, MatrixOrder=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_ResetWorldTransform(pGraphics)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_GetRotatedTranslation(Width, Height, Angle, ByRef xTranslation, ByRef yTranslation)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_GetRotatedDimensions(Width, Height, Angle, ByRef RWidth, ByRef RHeight)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_ImageRotateFlip(pBitmap, RotateFlipType=1)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>RotateNoneFlipNone   = 0</blockquote><br/> 
+<blockquote>Rotate90FlipNone     = 1</blockquote><br/> 
+<blockquote>Rotate180FlipNone    = 2</blockquote><br/> 
+<blockquote>Rotate270FlipNone    = 3</blockquote><br/> 
+<blockquote>RotateNoneFlipX      = 4</blockquote><br/> 
+<blockquote>Rotate90FlipX        = 5</blockquote><br/> 
+<blockquote>Rotate180FlipX       = 6</blockquote><br/> 
+<blockquote>Rotate270FlipX       = 7</blockquote><br/> 
+<blockquote>RotateNoneFlipY      = Rotate180FlipX</blockquote><br/> 
+<blockquote>Rotate90FlipY        = Rotate270FlipX</blockquote><br/> 
+<blockquote>Rotate180FlipY       = RotateNoneFlipX</blockquote><br/> 
+<blockquote>Rotate270FlipY       = Rotate90FlipX</blockquote><br/> 
+<blockquote>RotateNoneFlipXY     = Rotate180FlipNone</blockquote><br/> 
+<blockquote>Rotate90FlipXY       = Rotate270FlipNone</blockquote><br/> 
+<blockquote>Rotate180FlipXY      = RotateNoneFlipNone</blockquote><br/> 
+<blockquote>Rotate270FlipXY      = Rotate90FlipNone</blockquote><br/> 
+<code>Gdip_SetClipRect(pGraphics, x, y, w, h, CombineMode=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>Replace = 0</blockquote><br/> 
+<blockquote>Intersect = 1</blockquote><br/> 
+<blockquote>Union = 2</blockquote><br/> 
+<blockquote>Xor = 3</blockquote><br/> 
+<blockquote>Exclude = 4</blockquote><br/> 
+<blockquote>Complement = 5</blockquote><br/> 
+<code>Gdip_SetClipPath(pGraphics, Path, CombineMode=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_ResetClip(pGraphics)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_GetClipRegion(pGraphics)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_SetClipRegion(pGraphics, Region, CombineMode=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_CreateRegion()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_DeleteRegion(Region)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Gdip_LockBits(pBitmap, x, y, w, h, ByRef Stride, ByRef Scan0, ByRef BitmapData, LockMode = 3, PixelFormat = 0x26200a)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<blockquote>BitmapLockBits</blockquote><br/> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_UnlockBits(pBitmap, ByRef BitmapData)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_SetLockBitPixel(ARGB, Scan0, x, y, Stride)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_GetLockBitPixel(Scan0, x, y, Stride)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_PixelateBitmap(pBitmap, ByRef pBitmapOut, BlockSize)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_ToARGB(A, R, G, B)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_FromARGB(ARGB, ByRef A, ByRef R, ByRef G, ByRef B)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_AFromARGB(ARGB)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_RFromARGB(ARGB)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_GFromARGB(ARGB)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>Gdip_BFromARGB(ARGB)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+<code>StrGetB(Address, Length=-1, Encoding=0)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<blockquote>#####################################################################################</blockquote><br/> 
+
+</ul>
+
+</ul>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<!-- Navigation Links At Bottom -->
+<a href="#Description">Description</a>
+
+
+<p><a href="#Functions">Functions</a></p
+
+
+
+
+</section><footer><div class="slow_con_container" data-tracking-cat="footer-standard" st-ve="18">@brutus_skywalker<br> <a href="https://autohotkey.com/boards/viewtopic.php?f=6&t=50304">DocGen Forums Link</a></div>
