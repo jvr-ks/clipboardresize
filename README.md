@@ -21,11 +21,11 @@ Hotkey | Operation
 **\[ALT] + \[z]** | the ClipboardResize capture hotkey
   
 The ClipboardResize capture hotkey operates likewise:  
-if Config-file section \[config] -> winHotkeyAliasEnable=1 -> as a simpler alias to \[SHIFT] + \[WIN] + \[S] or  
-if Config-file section \[config] -> winHotkeyAliasEnable=0 -> use the builtin "capture screen area"-operation. 
+if Config-file section \[config] -&gt; winHotkeyAliasEnable=1 -&gt; as a simpler alias to \[SHIFT] + \[WIN] + \[S] or  
+if Config-file section \[config] -&gt; winHotkeyAliasEnable=0 -&gt; use the builtin "capture screen area"-operation. 
 (the "builtin "capture screen area"-operation" is not usable at the moment!)  
   
-If Config-file section \[operation] -> useActivator=1, the activator-button is shown, otherwise the ClipboardResize gui is activated.  
+If Config-file section \[operation] -&gt; useActivator=1, the activator-button is shown, otherwise the ClipboardResize gui is activated.  
   
 If anything is copied to the clipboard, the soundfile "clipboard.mp3" \*1) is played too.  
   
@@ -35,7 +35,7 @@ The download includes a batchfile "clipboardresize_startVisible.bat" to test it.
 To start the app with Windows, use the batchfile (powershell) "create_clipboardresize_exe_link_in_autostartfolder.bat", or  
 take a look at the project [startdelayed](https://github.com/jvr-ks/startdelayed).  
    
-\*1) Controlled by \[config] -> clipboardBeepSound in the Config-file.  
+\*1) Controlled by \[config] -&gt; clipboardBeepSound in the Config-file.  
 \*2) The app can only distinguish between data (possibly an image) and text.  
 
 **Config-file is "clipboardresize.ini".**  
@@ -70,7 +70,7 @@ do also **not** close an open clipboardresize window.
 
 #### OCR integration  
 I use it to extract text from images (not complete documents with multible colums).  
-Default hotkey is: \[ALT] + \[y], Config-file section \[hotkeys] -> ocrHotkey), press the hotkey then draw a rectangle all around the text.  
+Default hotkey is: \[ALT] + \[y], Config-file section \[hotkeys] -&gt; ocrHotkey), press the hotkey then draw a rectangle all around the text.  
 Use a picture-viewer that does not scroll the image, otherwise it will difficult to draw a correct rectangular around the text.  
 I prefer [Irfanview](https://www.irfanview.com/).  
 Uses Tesseract for Windows now, install it from:  
@@ -86,7 +86,7 @@ psm="6"
 imagenameTmp="_tmp.png"  
 tesseracOutputbase="_tmp"  
 The two temporary files are not deleted, but overwritten on next ocr operation.  
-The file -> tesseracOutputbase gets the extension ".txt" by Tesseract.  
+The file -&gt; tesseracOutputbase gets the extension ".txt" by Tesseract.  
   
 [Tesseract docs](https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html)  
   
@@ -175,7 +175,7 @@ Gdip\_All.ahk based on Gdip standard library v1.45 by tic (Tariq Porter) 07/09/1
 
 #### Latest changes  
 
-Version (>=)| Change
+Version (&gt;=)| Change
 ------------ | -------------
 0.168 | Default ocr filenames changed to "_tmp.\*", ocr: using own area-capture mechanism, OCR-Hotkey default changed to Alt + y  
 0.164 | A32 version removed
@@ -206,7 +206,7 @@ Copyright (c) 2019/2020/2021 J. v. Roos
 
 
 ##### Virusscan at Virustotal 
-[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1705600411
+[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1706975242
 )  
-[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1705600412
+[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1706975243
 )  
