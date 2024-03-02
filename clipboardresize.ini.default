@@ -11,6 +11,7 @@ captureAndResizeSaveHotkey="^#z"
 setsizeValuesHotkey="!#z"
 ocrHotkey="!y"
 winHotkeyAlias="!z"
+openFilemanagerHotkey="+!z"
 
 [config]
 font="Calibri"
@@ -37,7 +38,7 @@ page=46
 
 [tesseract]
 tesseractPath="C:\Program Files\Tesseract-OCR\tesseract.exe"
-lang="eng+deu"
+lang="deu+eng+rus"
 psm="6"
 imagenameTmp="_tmp.png"
 tesseracOutputbase="_tmp"

@@ -79,7 +79,7 @@ wrkDir := A_ScriptDir . "\"
 saveDir := wrkDir . "_savedclips\"
 
 appName := "ClipboardResize"
-appVersion := "0.173"
+appVersion := "0.174"
 app := appName . " " . appVersion
 appnameLower := "clipboardresize"
 appExtension := ".exe"
@@ -162,6 +162,8 @@ winHotkeyAliasDefault := "!z"
 winHotkeyAlias := winHotkeyAliasDefault
 winHotkeyAliasEnable := 1
 
+openFilemanagerHotkeyDefault := "+!z"
+openFilemanagerHotkey := openFilemanagerHotkeyDefault
 
 targetWidth := 800
 targetHeight := 600
@@ -582,7 +584,7 @@ readConfig(){
   global menuHotkeyDefault, menuHotkey, exitHotkeyDefault, exitHotkey
   global resizeOnlyHotkeyDefault, resizeOnlyHotkey, captureAndResizeHotkeyDefault, captureAndResizeHotkey
   global captureAndResizeSaveHotkeyDefault, captureAndResizeSaveHotkey, ocrHotkeyDefault
-  global ocrHotkey, setsizeValuesHotkeyDefault, setsizeValuesHotkey
+  global ocrHotkey, setsizeValuesHotkeyDefault, setsizeValuesHotkey, openFilemanagerHotkeyDefault, openFilemanagerHotkey
   global holdtimeDefault, holdtime, holdtimeshortDefault, holdtimeshort, holdtimelongDefault, holdtimelong
   global filemanager
   global fontDefault, font, fontsizeDefault, fontsize
@@ -620,7 +622,10 @@ readConfig(){
 
   ocrHotkey := iniReadSave("ocrHotkey", "hotkeys", ocrHotkeyDefault)
   Hotkey, %ocrHotkey%, ocr, On
-
+  
+  openFilemanagerHotkey := iniReadSave("openFilemanagerHotkey", "hotkeys", openFilemanagerHotkeyDefault)
+  Hotkey, %openFilemanagerHotkey%, openFilemanager, On
+  
   holdtime := iniReadSave("holdtime", "clipboardresize", holdtimeDefault)
   holdtimeshort := iniReadSave("holdtimeshort", "clipboardresize", holdtimeshortDefault)
   holdtimelong := iniReadSave("holdtimelong", "clipboardresize", holdtimelongDefault)

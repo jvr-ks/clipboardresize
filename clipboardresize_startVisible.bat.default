@@ -4,6 +4,8 @@
 
 cd %~dp0
 
+clipboardresize.exe remove
+
 start clipboardresize.exe showwindow
 
 

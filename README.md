@@ -49,7 +49,8 @@ Hotkey | Action | Remarks | Virtual-Key Codes
 **\[WIN] + \[ALT] + \[z]** | set resize-width and -height | settings are saved in the file "clipboardresize.ini"  
 **\[CTRL] + \[WIN] + \[z]** | capture fullscreen, reduced size | to clipboard + save as a file *1)  
 **\[CTRL] + \[ALT] + \[WIN] + \[z]]** | kill the app (remove it from the memory) |  
-  
+**\[SHIFT] + \[ALT] + \[z]** | open filemanager | filemanager in ".\_savedclips" folder  
+
 *1) Image file (*.png format) is stored into the ".\_savedclips" folder,  
 filenames are:  
 "clpr_DATETIME_0.png" ("_0"-ending are resized) and  
@@ -177,6 +178,7 @@ Gdip\_All.ahk based on Gdip standard library v1.45 by tic (Tariq Porter) 07/09/1
 
 Version (&gt;=)| Change
 ------------ | -------------
+0.174 | Open Filemanager Hotkey (\[SHIFT] + \[ALT] + \[z])
 0.168 | Default ocr filenames changed to "_tmp.\*", ocr: using own area-capture mechanism, OCR-Hotkey default changed to Alt + y  
 0.164 | A32 version removed
 0.160 | clipboard text modification removed, an activated CAPSLOCK prevents a resize
@@ -206,7 +208,7 @@ Copyright (c) 2019/2020/2021 J. v. Roos
 
 
 ##### Virusscan at Virustotal 
-[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1706975242
+[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1709377536
 )  
-[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1706975243
+[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1709377537
 )  
