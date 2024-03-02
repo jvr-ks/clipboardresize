@@ -8,7 +8,7 @@ copy /Y "clipboard.mp3" "clipboard.mp3.default"
 
 copy /Y "noimage.png" "noimage.png.default"
 
-copy /Y "Licenses.txt" "Licenses.txt.default"
+copy /Y "license.txt" "license.txt.default"
 
 copy /Y "clipboardresize_startVisible.bat" "clipboardresize_startVisible.bat.default"
 

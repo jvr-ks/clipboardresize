@@ -2,6 +2,6 @@ clipboardresize32.exe
 clipboardresize.ini
 clipboard.mp3
 noimage.png
-Licenses.txt
+license.txt
 clipboardresize_startVisible.bat
 
