@@ -91,10 +91,10 @@ The file -&gt; tesseracOutputbase gets the extension ".txt" by Tesseract.
   
 [Tesseract docs](https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html)  
   
-#### Automode  
-If the "Automode" checkbox is checked, an automatic resize operation is executed in the background if a new clipboard-image is detected.  
+#### Automode Checkboxes  
+**Checkboxes only affect the hotkey operations, not operations that are triggered by a button press,**  
+**besides the "Snipping Tool"-button!**  
   
-#### Checkboxes  
 * Auto-Resize  
   If not checked the captured image is not resized.  
   The original version of the captured image is written to the disk ("_1"-ending), if Auto-Save (fullsize) is checked.  
@@ -149,6 +149,14 @@ Auto-Resize off/on, Auto-Save on, Use-Activator off, Auto-hide on.
   
 ** An activated CAPSLOCK always prevents a resize!**  
 Use it, to temporary disable any resize operation.  
+
+
+#### Known issues / bugs  
+  
+Issue / Bug | Type | fixed in version  
+------------ | ------------- | -------------  
+Images are save again, if the "Snipping Tool" is closed | issue | ---
+  
   
 #### Requirements
 * Windows 10 or later only.
@@ -205,7 +213,7 @@ Copyright (c) 2024 J. v. Roos
 
 
 ##### Virusscan at Virustotal 
-[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1709920707
+[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1711711683
 )  
-[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1709920708
+[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1711711684
 )  

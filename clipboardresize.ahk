@@ -79,7 +79,7 @@ wrkDir := A_ScriptDir . "\"
 saveDir := wrkDir . "_savedclips\"
 
 appName := "ClipboardResize"
-appVersion := "0.174"
+appVersion := "0.175"
 app := appName . " " . appVersion
 appnameLower := "clipboardresize"
 appExtension := ".exe"
@@ -324,7 +324,7 @@ mainWindow(hide := false) {
   global captureAndResizeHotkey, captureAndResizeSaveHotkey, setsizeValuesHotkey
   
   global internalPreviewWidth, internalPreviewHeight
-  global MainStatusBarHwnd, automodeVari, resizeVari, appVersion
+  global MainStatusBarHwnd, automodeVari, appVersion
   global InternalPreviewImage, msgDefault
   global mainHWND, targetSize, CR, autoResize, autoSave, autoSaveFullsize, useActivator, autoHide, sizeValues
   
@@ -345,8 +345,13 @@ mainWindow(hide := false) {
   menu, MainMenu, NoDefault
   menu, MainMenu, DeleteAll
   
-  menu, MainMenuUpdate, Add,Check if new version is available, checkUpdate
-  menu, MainMenuUpdate, Add,Start updater, updateApp
+  menu, MainMenuOperations, Add, Resize only, resize
+  
+  menu, MainMenuUpdate, Add, Check if new version is available, checkUpdate
+  menu, MainMenuUpdate, Add, Start updater, updateApp
+  
+  
+  menu, MainMenu, Add, Operations,:MainMenuOperations
   
   menu, MainMenu, Add, %showFullSizeViewText%, showFullSizeView
   
@@ -365,7 +370,7 @@ mainWindow(hide := false) {
   gui, guiMain:Add, StatusBar, hwndMainStatusBarHwnd -Theme +BackgroundSilver
   
   
-  gui, guiMain:Add, Button, xm ym w%buttonWidth% Default Gresize VresizeVari,Resize
+  gui, guiMain:Add, Button, xm ym w%buttonWidth% Default GsnippingTool, Snipping Tool
   gui, guiMain:Add, Button, x+m yp+0 w%buttonWidth% gresizeSave,Resize and save
   gui, guiMain:Add, Button, x+m yp+0 w%buttonWidth% GimagePreviewShow, Saved-clips preview
   gui, guiMain:Add, Button, x+m yp+0 w%buttonWidth% VsizeValues GsetSizeValues,Resize to (%targetwidth% x %targetheight%)
@@ -490,10 +495,10 @@ OnClipboardChangeFunction(type){
       autoResize := 0
       tipTop("Capslock is on, no autoresize!")
     }
-
+    
     if (autoSaveFullsize){
       saveOnly(true, name)
-    }
+     }
 
     if (autoResize){
       resize()
@@ -874,7 +879,16 @@ resize(){
   
   return
 }
+;------------------------------- snippingTool -------------------------------
+snippingTool(){
+  global autoSaveFullsize
 
+  hideWindow()
+  
+  Run %A_WinDir%\system32\SnippingTool.exe
+  
+  return
+}
 ;*************************** captureAndResizeStart ***************************
 captureAndResizeStart(){
 
