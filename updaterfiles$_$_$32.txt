@@ -1,0 +1,7 @@
+clipboardresize32.exe
+clipboardresize.ini
+clipboard.mp3
+noimage.png
+license.txt
+clipboardresize_startVisible.bat
+
