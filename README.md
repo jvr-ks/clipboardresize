@@ -77,29 +77,8 @@ Capture area: [SHIFT] + [WIN] + [s] hotkey is supplied by Windows 10, not by cli
 Other Windows capture hotkeys: [WIN] + [PRINT] (capture whole screen) and [ALT] + [WIN] + [PRINT] (capture active window)  
 do also **not** close an open clipboardresize window.  
 
-#### OCR integration  
-I use it to extract text from images (not complete documents with multible colums).  
-Default hotkey is: \[ALT] + \[y], configfile section \[hotkeys] -&gt; ocrHotkey), press the hotkey then draw a rectangle all around the text.  
-The selector \[ALT] is not changable, but images / backgroundimages scrolling if the mouse is dragged
-can now be captured without a problem.
-I prefer [Irfanview](https://www.irfanview.com/).  
-Uses Tesseract for Windows now, install it from:  
-[https://digi.bib.uni-mannheim.de/tesseract/](https://digi.bib.uni-mannheim.de/tesseract/)  
-to the tesseractPath defined in the configfile.  
-  
-ClipboardResize just captures the selected area to the file "tmp.png" and call tesseract.exe with parameters:  
-lang="eng+deu", psm="6", tesseracOutputbase="tmp"  
-The file "tmp.txt" is generated and read back to the clipboard. Simple, but effectiv!  
-Parameters are configurable, configfile section \[tesseract]:  
-tesseractPath="C:\Program Files\Tesseract-OCR\tesseract.exe"  
-lang="eng+deu"  
-psm="6"  
-imagenameTmp="_tmp.png"  
-tesseracOutputbase="_tmp"  
-The two temporary files are not deleted, but overwritten on next ocr operation.  
-The file -&gt; tesseracOutputbase gets the extension ".txt" by Tesseract.  
-  
-[Tesseract docs](https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html)  
+#### ~~OCR integration~~  
+removed  
   
 #### Automode Checkboxes  
 **Checkboxes only affect the hotkey operations, not operations that are triggered by a button press,**  
@@ -196,6 +175,7 @@ Gdip\_All.ahk based on Gdip standard library v1.45 by tic (Tariq Porter) 07/09/1
 
 Version (&gt;=)| Change
 ------------ | -------------  
+0.177 | OCR integration removed
 0.176 | Capture procedure enhanced to capture areas that would move otherwise (mouse drag not used anymore!)
 0.174 | Open Filemanager Hotkey (\[SHIFT] + \[ALT] + \[z])
 0.168 | Default ocr filenames changed to "_tmp.\*", ocr: using own area-capture mechanism, OCR-Hotkey default changed to Alt + y  
@@ -224,7 +204,7 @@ Copyright (c) 2024 J. v. Roos
 
 
 ##### Virusscan at Virustotal 
-[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1747679472
+[Virusscan at Virustotal, clipboardresize.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840/detection/u-1977c19b29a79c3d996c6bf3c2c8e7a359a8ec556c715bc0076a4232678d9840-1747681171
 )  
-[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1747679473
+[Virusscan at Virustotal, clipboardresize32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f/detection/u-1d83a4583e13f6dd7dc1d9252f6ad23f0b4a1b2b6159b6ab1b96d0b9ffc59f0f-1747681173
 )  

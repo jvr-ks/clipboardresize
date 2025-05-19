@@ -68,7 +68,6 @@ autoSave := false
 autoSaveFullsize := false
 useActivator := true
 autoHide := false
-ocrmode := false
 
 msgDefault := ""
 
@@ -158,9 +157,6 @@ captureAndResizeSaveHotkey := captureAndResizeSaveHotkeyDefault
 
 setsizeValuesHotkeyDefault := "!#z"
 setsizeValuesHotkey := setsizeValuesHotkeyDefault
-
-ocrHotkeyDefault := "!y"
-ocrHotkey := ocrHotkeyDefault
 
 winHotkeyAliasDefault := "!z"
 winHotkeyAlias := winHotkeyAliasDefault
@@ -480,7 +476,7 @@ showErrorMessage(msg){
 ;------------------------- OnClipboardChangeFunction -------------------------
 OnClipboardChangeFunction(type){
   global wrkDir, startDelayAfterClipboardChange
-  global ocrmode, holdtime, holdtimelong, clipboardBeepSound, autoResize
+  global holdtime, holdtimelong, clipboardBeepSound, autoResize
   global useActivator, autoSave, autoSaveFullsize, autoHide
   
   OnClipboardChange("OnClipboardChangeFunction", 0)
@@ -597,8 +593,8 @@ readConfig(){
   global configFile, targetWidth, targetHeight
   global menuHotkeyDefault, menuHotkey, exitHotkeyDefault, exitHotkey
   global resizeOnlyHotkeyDefault, resizeOnlyHotkey, captureAndResizeHotkeyDefault, captureAndResizeHotkey
-  global captureAndResizeSaveHotkeyDefault, captureAndResizeSaveHotkey, ocrHotkeyDefault
-  global ocrHotkey, setsizeValuesHotkeyDefault, setsizeValuesHotkey, openFilemanagerHotkeyDefault, openFilemanagerHotkey
+  global captureAndResizeSaveHotkeyDefault, captureAndResizeSaveHotkey
+  global setsizeValuesHotkeyDefault, setsizeValuesHotkey, openFilemanagerHotkeyDefault, openFilemanagerHotkey
   global holdtimeDefault, holdtime, holdtimeshortDefault, holdtimeshort, holdtimelongDefault, holdtimelong
   global filemanager
   global fontDefault, font, fontsizeDefault, fontsize
@@ -635,9 +631,6 @@ readConfig(){
   setsizeValuesHotkey := iniReadSave("setsizeValuesHotkey", "hotkeys", setsizeValuesHotkeyDefault)
   Hotkey, %setsizeValuesHotkey%, setsizeValues, On
 
-  ocrHotkey := iniReadSave("ocrHotkey", "hotkeys", ocrHotkeyDefault)
-  Hotkey, %ocrHotkey%, ocr, On
-  
   openFilemanagerHotkey := iniReadSave("openFilemanagerHotkey", "hotkeys", openFilemanagerHotkeyDefault)
   Hotkey, %openFilemanagerHotkey%, openFilemanager, On
   
@@ -671,12 +664,6 @@ readConfig(){
   captureAreaHotkey := iniReadSave("captureAreaHotkey", "hotkeys", captureAreaHotkeyDefault)
   if (captureAreaHotkey != "")
     Hotkey, %captureAreaHotkey%, captureAreaToClipboard, On
-
-  tesseractPath := iniReadSave("tesseractPath", "tesseract", "C:\Program Files\Tesseract-OCR\tesseract.exe")
-  lang := iniReadSave("lang", "tesseract", "eng+deu")
-  psm := iniReadSave("psm", "tesseract", 6 )
-  imagenameTmp := iniReadSave("imagenameTmp", "tesseract", "_tmp.png")
-  tesseracOutputbase := iniReadSave("tesseracOutputbase", "tesseract", "tmp")
 
   return
 }
@@ -1280,7 +1267,6 @@ updateApp(){
 
   return
 }
-
 ;----------------------------------- exit -----------------------------------
 exit() {
   global app
@@ -1301,108 +1287,7 @@ exit() {
   OnClipboardChange("OnClipboardChangeFunction",0)
   ExitApp
 }
-;------------------------------------ ocr ------------------------------------
-ocr(){
-  global gdiToken, holdtime, holdtimelong, wrkDir
-  global tesseractPath, lang, psm, imagenameTmp, tesseracOutputbase
-  
-  changeCursor()
-  ttText := "
-  (
-    OCR: Press and hold the [Alt]-key,
-    then click on top-left of the text-area and
-    hold down the [Alt]-key while moving the mouse,
-    but do NOT drag the mouse.
-    Release the [Alt]-key if the area is completely marked!
-  )"
 
-  tooltipFollowMouseOn(ttText)
-
-  startGDI()
-  
-  Gui, overlay:New, -Caption +E0x80000 +LastFound +AlwaysOnTop +ToolWindow +OwnDialogs HWNDoverlayHWND
-  Gui, overlay:Show, x0 y0 w%A_ScreenWidth% h%A_ScreenHeight%
-  
-  hbm := CreateDIBSection(A_ScreenWidth, A_ScreenHeight)
-  hdc := CreateCompatibleDC()
-  obm := SelectObject(hdc, hbm)
-  theGraphics := Gdip_GraphicsFromHDC(hdc)
-  Gdip_SetSmoothingMode(theGraphics, 4)
-  
-  theBrush := Gdip_BrushCreateSolid(0x660000ff)
-  
-  imgx := 0
-  imgy := 0
-  height := 0
-  width := 0
-
-  thePen := Gdip_CreatePen(0xffff0000, 3)
-
-  KeyWait, LButton, D
-  tooltipFollowMouseOff()
-  mouseGetPos, x1, y1
-
-  ;while getKeyState("LButton", "P"){
-  downYKey := GetKeyState("Alt", "P")
-  while (downYKey) {
-    mouseGetPos, x2, y2
-    Gdip_GraphicsClear(theGraphics)
-    
-    imgx := min(x1, x2)
-    imgy := min(y1, y2)
-    width := abs(x2 - x1)
-    height := abs(y2 - y1)
-    
-    Gdip_FillRoundedRectangle(theGraphics, theBrush, imgx, imgy, width, height, 2)
-    UpdateLayeredWindow(overlayHWND, hdc, 0, 0, A_ScreenWidth, A_ScreenHeight)
-    sleep, 100
-    downYKey := GetKeyState("Alt", "P")
-  }
-
-  tooltipFollowMouseOff()
-  resetCursor()
-  
-  Gui, overlay:Destroy
-
-  Image := Gdip_Bitmapfromscreen(imgx "|" imgy "|" width "|" height)
-  
-  Gdip_Savebitmaptofile(Image, imagenameTmp)
-  Gdip_DisposeImage(Image)
-  
-  Gdip_DeleteBrush(theBrush)
-  SelectObject(hdc, obm)
-  DeleteObject(hbm)
-  DeleteDC(hdc)
-  Gdip_DeleteGraphics(theGraphics)
-  StopGDI()
-  
-; OCR:
-  txtExtension :=  ".txt"
-  outputfile := wrkDir . tesseracOutputbase . txtExtension
-  
-  if (FileExist(outputfile))
-    FileDelete, %outputfile% 
-
-  if (FileExist(tesseractPath)){
-    runWait %tesseractPath% %imagenameTmp% %tesseracOutputbase% -l %lang% --psm %psm%,, Hide
-    data := ""
-    if (FileExist(outputfile)){
-      FileRead, data, %outputfile%
-      if (!ErrorLevel){
-        tipTop(data, holdtimelong)
-        clipboard := data
-      } else {
-        tipTop("OCR-error occured, something went wrong!", holdtime)
-      }
-    } else {
-      tipTop("Tesseract-error occured, produced no output!", holdtime)
-    }
-  } else {
-    tipTop("Tesseract installation missing, file " . tesseractPath . " not found!", holdtime)
-  }
-
-  return
-}
 ;-------------------------- captureAreaToClipboard --------------------------
 captureAreaToClipboard(){
   ; image
